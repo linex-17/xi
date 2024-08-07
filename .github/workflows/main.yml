@@ -25,10 +25,10 @@ jobs:
     - name: Build Kernelmain
       uses: ./
       with:
-          kernel-url: https://gitlab.com/linex-17/kernel_xiaomi_msm8937.git
+          kernel-url: https://github.com/linex-17/kernel.git
           kernel-dir: msm-4.9
           kernel-branch: 13
-          config: santoni_treble_defconfig
+          config: xi_config
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
@@ -37,7 +37,7 @@ jobs:
           ksu-lkm: false
           nethunter: false
           nethunter-patch: false
-          android-version: 11
+          android-version: 12
           aosp-clang-version: r383902
           python-27: true
           disable-lto: true
