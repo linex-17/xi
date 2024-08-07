@@ -1,0 +1,46 @@
+name: CI
+on:
+  push:
+    branches: main
+  pull_request:
+
+jobs:
+  lint:
+    uses: ./.github/workflows/check.yml
+
+  ci-test:
+    needs:
+      - lint
+    name: Build Kernel main test
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Build Kernelmain
+      uses: ./
+      with:
+          kernel-url: https://gitlab.com/linex-17/kernel_xiaomi_msm8937.git
+          kernel-dir: msm-4.9
+          kernel-branch: 13-dev
+          config: santoni_treble_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          ksu: true
+          ksu-version: "main"
+          ksu-lkm: true
+          nethunter: false
+          nethunter-patch: false
+          android-version: 11
+          aosp-clang-version: r383902
+          python-27: true
+          disable-lto: true
+          anykernel3: true
+          
+    
