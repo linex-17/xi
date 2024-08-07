@@ -22,13 +22,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Build Kernelmain
+    - name: Build Kernel main
       uses: ./
       with:
           kernel-url: https://github.com/linex-17/kernel.git
           kernel-dir: msm-4.9
           kernel-branch: 13
-          config: xi_config
+          config: santoni_treble_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
@@ -37,7 +37,7 @@ jobs:
           ksu-lkm: false
           nethunter: false
           nethunter-patch: false
-          android-version: 12
+          android-version: 11
           aosp-clang-version: r383902
           python-27: true
           disable-lto: true
