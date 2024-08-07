@@ -1,0 +1,31 @@
+# A simple action usage
+name: Build Kernel Test
+on:
+  workflow_dispatch:
+
+jobs:
+  Build-Kernel:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - name: Build Kernel
+      uses: linex-17/idk@main
+      with:
+          kernel-url: https://gitlab.com/linex-17/kernel_xiaomi_msm8937.git
+          kernel-dir: msm-4.9
+          kernel-branch: 13
+          config: santoni_treble_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          ksu: false
+          ksu-version: false
+          android-version: 12
+          aosp-clang-version: r383902
+          python-27: false
+          disable-lto: true
+          anykernel3: true
