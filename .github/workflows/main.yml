@@ -27,7 +27,7 @@ jobs:
       with:
           kernel-url: https://gitlab.com/linex-17/kernel_xiaomi_msm8937.git
           kernel-dir: msm-4.9
-          kernel-branch: 13-dev
+          kernel-branch: 13
           config: santoni_treble_defconfig
           arch: arm64
           aosp-gcc: true
