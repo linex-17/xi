@@ -13,12 +13,12 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: linex-17/idk@main
+      uses: linex-17/xi@main
       with:
-          kernel-url: https://gitlab.com/linex-17/kernel_xiaomi_msm8937.git
+          kernel-url: https://github.com/linex-17/kernel.git
           kernel-dir: msm-4.9
           kernel-branch: 13
-          config: santoni_treble_defconfig
+          config: xi_config
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
