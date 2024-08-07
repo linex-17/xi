@@ -32,9 +32,9 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          ksu: true
-          ksu-version: "main"
-          ksu-lkm: true
+          ksu: false
+          ksu-version: false
+          ksu-lkm: false
           nethunter: false
           nethunter-patch: false
           android-version: 11
