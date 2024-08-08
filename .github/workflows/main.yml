@@ -37,7 +37,7 @@ jobs:
           ksu-lkm: false
           nethunter: false
           nethunter-patch: false
-          android-version: 11
+          android-version: 12
           aosp-clang-version: r383902
           python-27: true
           disable-lto: true
