@@ -11,7 +11,7 @@ jobs:
   ci-test:
     needs:
       - lint
-    name: Build Kernel
+    name: Build Kernel test kprobe 095
     strategy:
       fail-fast: false
     runs-on: ubuntu-latest
