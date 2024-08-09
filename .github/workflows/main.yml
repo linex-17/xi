@@ -11,7 +11,7 @@ jobs:
   ci-test:
     needs:
       - lint
-    name: Build Kernel main test
+    name: Build Kernel
     strategy:
       fail-fast: false
     runs-on: ubuntu-24.04
@@ -22,7 +22,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Build Kernel KSU test Modul Fix2
+    - name: Build Kernel
       uses: ./
       with:
           kernel-url: https://github.com/linex-17/kernel.git
