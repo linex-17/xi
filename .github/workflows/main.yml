@@ -11,7 +11,7 @@ jobs:
   ci-test:
     needs:
       - lint
-    name: Build Kernel test kprobe 095
+    name: Build Kernel test backports namespace.c
     strategy:
       fail-fast: false
     runs-on: ubuntu-latest
