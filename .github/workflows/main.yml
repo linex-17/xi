@@ -22,7 +22,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Build Kernel main
+    - name: Build Kernel KSU test Modul Fix
       uses: ./
       with:
           kernel-url: https://github.com/linex-17/kernel.git
