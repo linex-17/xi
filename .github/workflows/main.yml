@@ -11,7 +11,7 @@ jobs:
   ci-test:
     needs:
       - lint
-    name: Build Kernel test backports namespace.c
+    name: Build Kernel test backports namespace.c disable KPROBE
     strategy:
       fail-fast: false
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Build Kernel 13
+    - name: Build Kernel 4.9.227
       uses: ./
       with:
           kernel-url: https://github.com/linex-17/kernel.git
