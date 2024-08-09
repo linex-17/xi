@@ -33,7 +33,7 @@ jobs:
           aosp-gcc: true
           aosp-clang: true
           ksu: true
-          ksu-version: v0.7.6
+          ksu-version: v0.9.5
           ksu-lkm: false
           nethunter: false
           nethunter-patch: false
