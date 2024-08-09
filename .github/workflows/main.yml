@@ -34,7 +34,7 @@ jobs:
           aosp-clang: true
           ksu: true
           ksu-version: v0.7.6
-          ksu-lkm: false
+          ksu-lkm: true
           nethunter: false
           nethunter-patch: false
           android-version: 12
